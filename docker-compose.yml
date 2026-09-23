@@ -1,0 +1,21 @@
+services:
+  api:
+    build: ./backend
+    ports: ["8000:8000"]
+    environment:
+      DATABASE_URL: sqlite:////data/leadlens.db
+      ENRICH_MODE: ${ENRICH_MODE:-fixture}
+      LLM_PROVIDER: ${LLM_PROVIDER:-none}
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      CORS_ORIGINS: http://localhost:5173,http://localhost:4173
+    volumes:
+      - ./data:/app/data:ro
+      - api-data:/data
+  web:
+    build: ./frontend
+    ports: ["5173:80"]
+    environment:
+      VITE_API_URL: http://localhost:8000
+    depends_on: [api]
+volumes:
+  api-data:

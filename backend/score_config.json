@@ -1,0 +1,69 @@
+{
+  "grades": { "A": 80, "B": 62, "C": 40 },
+  "quadrant_thresholds": { "fit": 65, "exit": 55, "min_confidence": 50 },
+  "exit_ai_blend": 0.3,
+  "presets": {
+    "searcher": {
+      "label": "Searcher / ETA buyer",
+      "description": "Owner-operated, profitable, durable businesses in the $1M–$20M band.",
+      "fit": {
+        "revenue": 25,
+        "years": 15,
+        "employees": 15,
+        "business_model": 10,
+        "industry": 10,
+        "reachability": 15,
+        "completeness": 10
+      },
+      "revenue_bands": { "full": [1000000, 20000000], "half": [500000, 50000000] },
+      "employee_bands": { "full": [10, 100], "half": [5, 250] },
+      "exit": {
+        "company_age": 20,
+        "owner_operated": 15,
+        "family_language": 10,
+        "web_staleness": 15,
+        "independence": 15,
+        "small_stable_team": 10,
+        "boomer_trade": 15
+      }
+    },
+    "sales": {
+      "label": "B2B sales team",
+      "description": "Reachable, growing accounts that can buy now.",
+      "fit": {
+        "revenue": 15,
+        "years": 5,
+        "employees": 15,
+        "business_model": 15,
+        "industry": 10,
+        "reachability": 25,
+        "completeness": 15
+      },
+      "revenue_bands": { "full": [2000000, 200000000], "half": [500000, 1000000000] },
+      "employee_bands": { "full": [20, 500], "half": [10, 2000] },
+      "exit": {
+        "company_age": 10,
+        "owner_operated": 20,
+        "family_language": 5,
+        "web_staleness": 10,
+        "independence": 20,
+        "small_stable_team": 15,
+        "boomer_trade": 20
+      }
+    }
+  },
+  "stable_industries": [
+    "healthcare", "home health", "dental", "medical", "manufacturing", "machining", "fabrication",
+    "it services", "information technology", "managed services", "software", "logistics", "trucking",
+    "distribution", "wholesale", "business services", "accounting", "insurance", "engineering",
+    "hvac", "plumbing", "electrical", "landscaping", "printing", "packaging", "construction services",
+    "environmental", "facilities", "staffing", "legal", "education"
+  ],
+  "volatile_industries": ["crypto", "blockchain", "restaurant", "bar", "nightlife", "media", "entertainment", "cannabis", "real estate brokerage", "retail apparel"],
+  "boomer_trades": [
+    "hvac", "plumbing", "electrical", "machining", "machine shop", "manufacturing", "fabrication",
+    "distribution", "wholesale", "accounting", "dental", "printing", "landscaping", "trucking",
+    "logistics", "packaging", "roofing", "auto repair", "janitorial", "pest control", "insurance agency",
+    "funeral", "veterinary", "optometry", "engineering", "surveying", "sign", "tool"
+  ]
+}
