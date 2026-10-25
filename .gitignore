@@ -18,4 +18,3 @@ Thumbs.db
 # local tooling
 .claude/
 *.tsbuildinfo
-config.bat
